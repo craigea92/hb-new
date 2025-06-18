@@ -1,0 +1,139 @@
+/* components/GlobalBanner/GlobalBanner.module.css */
+.bannerWrapper {
+  width: 100%;
+  color: white;
+  font-size: 0.875rem;
+  top: 0;
+}
+
+/* Variants */
+.teal {
+  background-color: var(--color-teal);
+}
+.blue {
+  background-color: var(--color-blue);
+}
+.green {
+  background-color: var(--color-green);
+}
+
+.innerContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.5rem 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.promotionContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.promotionText {
+  margin: 0;
+  font-weight: 400;
+}
+
+.codeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.codeLabel {
+  font-weight: 400;
+}
+
+.codeValue {
+  font-weight: 700;
+}
+
+.ctaLink {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ctaLink:hover {
+  text-decoration: none;
+}
+
+.secondaryLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.secondaryLink {
+  color: inherit;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.secondaryLink:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .innerContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .promotionContainer {
+    justify-content: center;
+    gap: auto;
+  }
+
+  .secondaryLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Add to GlobalBanner.module.css */
+
+.collapseButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding-right: 0;
+}
+
+.secondaryLinks {
+  transition: all 0.3s ease;
+}
+
+.secondaryLinks.visible {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.secondaryLinks.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+@media (min-width: 769px) {
+  /* Always show on desktop */
+  .secondaryLinks {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .collapseButton {
+    display: none;
+  }
+}
