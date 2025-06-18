@@ -6,9 +6,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Header />
-      <div className={styles.container}>
-        <h1>Welcome to your project!</h1>
-      </div>
+      <div className={styles.container}></div>
       <Footer />
     </main>
   );

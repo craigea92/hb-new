@@ -1,12 +1,62 @@
 .header {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topRow {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomRow {
+  width: 95%;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.logoContainer {
+  position: relative;
+  min-width: 120px;
+}
+
+.desktopLogo {
+  display: block;
+}
+
+.mobileLogo {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .desktopLogo {
+    display: none;
+  }
+
+  .mobileLogo {
+    display: block;
+    height: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Optional: Adjust logo size on mobile */
+  .logoContainer {
+    min-width: 68px;
+  }
 }
